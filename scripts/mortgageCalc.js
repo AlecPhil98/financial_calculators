@@ -20,23 +20,27 @@ function init() {
 
 function calculate() {
     //get the value out of the input fields the user types in
-    let principal = Number(document.querySelector("#number1Field").value);
-    let interestRate = Number(document.querySelector("#number2Field").value);
-    let loanLength = Number(document.querySelector("#number3Field").value);
+    let principalAmountField = Number(document.querySelector("#loanField").value);
+    let interestRateField = Number(document.querySelector("#interestField").value);
+    let loanLengthField = Number(document.querySelector("#loanTermsField").value);
 
     //calculate the monthly interest rate and the total number if payments
-    const monthlyRate = Number(interestRateField.value) / 100 / 12;
-    const numOfPayments = Number(loanLengthField.value) * 12;
+    const monthlyRate = interestRateField / 100 / 12;
+    const numOfPayments = loanLengthField * 12;
     const denominator = Math.pow(1 + monthlyRate, numOfPayments);
 
     //calculate monthly payment and total loan amount
-    const monthlyPayment = Number(principalAmountField.value) * (monthlyRate * denominator) / (denominator - 1);
+    const monthlyPayment = (principalAmountField) * (monthlyRate * denominator) / (denominator - 1);
     const totalPayment = monthlyPayment * numOfPayments;
-    const totalInterest = totalPayment - Number(principalAmountField.value)
+    const totalInterest = totalPayment - principalAmountField
 
     //formula for the mortagae 
-   monthlyPayment = principal * ((1 +interestRate/100) * (loanLength / 12))
-    //put the results in the answer input field 
-    document.querySelector("#answerField").value = monthlyMortgagePayment;
+    //monthlyPrincipalandInterestPayment = principalAmountField * (monthlyRate / 1 - (1 + monthlyRate) ^ loanLengthField)
 
-    }
+    //put the results in the answer input field 
+    document.querySelector("#answerField").value = 
+    document.querySelector("#answer2Field").value = 
+
+}
+
+

@@ -37,13 +37,13 @@
     </nav>
 <!--Input your Loan, interest rate, and loan term in years-->
     <div>
-        Loan Amount <input type="text" id="number1Field">
+        Loan Amount <input type="text" id="loanField">
     </div>
     <div>
-        Interest rate per year <input type="text" id="number2Field">
+        Interest rate per year <input type="text" id="interestField">
     </div>
     <div>
-        Loan in terms in years <input type="text" id="number3Field">
+        Loan in terms in years <input type="text" id="loanTermsField">
     </div>
 
 <!--calculate button-->
@@ -56,11 +56,15 @@
     <div>
         Answer: <input type="text" id="answerField" readonly>
     </div>
+    <div>
+        Answer: <input type="text" id="answer2Field" readonly>
+    </div>
 
 
 
 
-
+<!--Link to JS for mortgage calculator-->
+    <script src="scripts/mortgageCalc.js"></script>
 
     <!--Included the javascript from the CDN-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
