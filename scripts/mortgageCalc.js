@@ -38,8 +38,8 @@ function calculate() {
     //monthlyPrincipalandInterestPayment = principalAmountField * (monthlyRate / 1 - (1 + monthlyRate) ^ loanLengthField)
 
     //put the results in the answer input field 
-    document.querySelector("#answerField").value = 
-    document.querySelector("#answer2Field").value = 
+    document.querySelector("#answerField").value = monthlyPayment.toFixed(2)
+    document.querySelector("#answer2Field").value = totalInterest.toFixed(2)
 
 }
 
